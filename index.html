@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gezond eten is een basisrecht</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/x-icon" href="images/bord.png">
+</head>
+
+<body>
+
+  <section class="overlay" id="overlay">
+    <div class="scroll-indicator">Scroll Down
+      <div class="down-arrow"></div>
+    </div>
+
+    <div class="intro-text">
+      <article class="centered-container">
+        <img class="intro-meisje" src="images/meisje-intro.png" alt="images/meisje-intro.png">
+
+        <div class="title-1"> Gezond eten </div>
+        <div class="title-2"> is een </div>
+        <div class="title-3"> basisrecht </div>
+
+
+        <div class="animated-element-1"> </div>
+
+        <div class="animated-element-2">
+          <p> Gezond eten is voor veel mensen te duur. <span class="highlight">Floris Visser</span>, oprichter van de Volkskantine in Rotterdam laat zien dat gezond eten wel betaalbaar kan zijn en net zo toegankelijk als water en openbaar vervoer</p>
+        </div>
+        <img class="intro-floris" src="images/floris-visser.jpeg" alt="images/floris-visser.jpeg">
+
+        <div class="animated-element-3">
+          <p>
+            Maar hoe maak je mensen er nou het beste bewust dat gezond eten niet alleen een recht is maar ook echt van belang voor je hele welzijn en functioneren?
+          </p>
+        </div>
+        <img class="intro-volkskantine" src="images/461879313.avif" alt="images/volkskantine-binnen.png">
+
+        <div class="animated-element-4">
+          <p>
+            Door middel van quizzes en spelletjes probeer ik mensen meer inzicht te geven wat gezond eten nou precies is en hoe je jezelf het beste kunt motiveren ongezonde eetpatronen te vervangen door gezonde.
+          </p>
+
+          <p>
+            Dus, ga je mee naar de Volkskantine?
+          </p>
+      
+        </div>
+        <!-- <img class="intro-bord" src="images/bord.png" alt="images/bord.png"> -->
+        <video class="intro-bord" width="320" height="240" autoplay loop muted playsinline>
+          <source src="video/banaan.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="animated-element-5"></div>
+      </article>
+
+      <div class="intro-controls">
+        <button id="soundButton">Geluid aan</button>
+        <audio id="myAudio" loop>
+          <source src="audio/the-epic-2-by-rafael-krux(chosic.com).mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <button id="skipIntroButton">Sluit Intro</button>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="image-container">
+    <img class="background" src="images/background volkskantine.svg" alt="background volkskantine.svg">
+    <img class="tafel" src="images/tafel.png" alt="tafel.png">
+    <img id="radioImage" class="radio" src="images/radio.webp" alt="radio.png">
+    <audio id="audioRadio" src="audio/Vegetable Song ｜ Songs for kids ｜ The Singing Walrus.mp3"></audio>
+
+
+    <!-- Food group game-->
+    <div class="bord-container">
+      <img class="bord" src="images/bord.png" alt="bord.png">
+      <div class="image-text-bord">
+        <p>Schijf van 5 - game</p>
+      </div>
+    </div>
+
+
+    <dialog id="drag-and-drop-food">
+      <div class="content-drag-and-drop-food">
+        <h2>Schijf van 5</h2>
+        <p>Weet jij hoeveel je nodig hebt van elke <span class="highlight">voedingsgroep</span> per dag? Laat je kennis
+          zien!
+        </p>
+        <div class="dropzone-area">
+          <div class="joris-dropzone" data-dropzone="1"></div>
+          <div class="joris-dropzone" data-dropzone="2"></div>
+          <div class="joris-dropzone" data-dropzone="3"></div>
+          <div class="joris-dropzone" data-dropzone="4"></div>
+          <div class="joris-dropzone" data-dropzone="5"></div>
+
+
+          <!-- Fruit-->
+          <div id="popup1" class="popup">
+            <div class="popup-content">
+              <img class="drag-popup-apple" src="images/apple.png" alt="Apple">
+              <img class="drag-popup" src="images/banana.webp" alt="Banana">
+              <img class="drag-popup" src="images/orange.png" alt="Orange">
+            </div>
+          </div>
+
+          <!-- Grains-->
+          <div id="popup2" class="popup">
+            <div class="popup-content">
+              <img class="drag-popup" src="images/rice.png" alt="Rice">
+              <img class="drag-popup" src="images/bread.png" alt="Bread">
+              <img class="drag-popup" src="images/quinoa.png" alt="Quinoa">
+            </div>
+          </div>
+
+          <!-- Vegetables-->
+          <div id="popup3" class="popup">
+            <div class="popup-content">
+              <!-- Customize content for Draggable Item 2 -->
+              <img class="drag-popup" src="images/broccoli.png" alt="Broccoli">
+              <img class="drag-popup" src="images/carrot.webp" alt="Carrot">
+              <img class="drag-popup" src="images/eggplant.png" alt="Eggplant">
+            </div>
+          </div>
+
+          <!-- Proteine-->
+          <div id="popup4" class="popup">
+            <div class="popup-content">
+              <img class="drag-popup" src="images/chicken.png" alt="Chicken">
+              <img class="drag-popup" src="images/salmon.png" alt="Salmon">
+              <img class="drag-popup" src="images/beans.png" alt="Beans">
+            </div>
+          </div>
+
+          <!-- Dairy-->
+          <div id="popup5" class="popup">
+            <div class="popup-content">
+              <!-- You can customize the content here, e.g., add an image or text -->
+              <img class="drag-popup" src="images/milk.png" alt="Milk">
+              <img class="drag-popup" src="images/cheese.png" alt="Cheese">
+              <img class="drag-popup" src="images/yoghurt.png" alt="Yogurt">
+            </div>
+          </div>
+
+          <!-- Unhealthy food-->
+          <div id="popup6" class="popup">
+            <div class="popup-content">
+              <div class="images-container-unhealthy">
+                <img class="drag-popup" src="images/pizza.png" alt="Pizza">
+                <img class="drag-popup" src="images/chocolate.png" alt="Chocolat">
+                <img class="drag-popup" src="images/chips.png" alt="Chips">
+              </div>
+              <p>Deze soorten voedsel passen <span class="highlight2">niet</span> in de <span class="highlight2">schijf
+                  van 5</span>, want ze bevatten teveel <span class="highlight2">verzadigde vetten</span>, <span
+                  class="highlight2">suiker</span> en <span class="highlight2">kunstmatige stoffen.</span></p>
+            </div>
+          </div>
+
+
+          <div class="draggable-item" id="draggableItem1" data-draggable="1" draggable="true">Fruit</div>
+          <div class="draggable-item" id="draggableItem2" data-draggable="2" draggable="true">Granen</div>
+          <div class="draggable-item" id="draggableItem3" data-draggable="3" draggable="true">Groente</div>
+          <div class="draggable-item" id="draggableItem4" data-draggable="4" draggable="true">Proteine</div>
+          <div class="draggable-item" id="draggableItem5" data-draggable="5" draggable="true">Zuivel</div>
+          <div class="draggable-item" id="draggableItem6" data-draggable="6" draggable="true">???</div>
+        </div>
+        <button id="closeDragDropGameBtn">Sluit af</button>
+      </div>
+    </dialog>
+
+    <!-- Floris Visser popup-->
+    <div class="floris-container-home">
+      <img class="floris-visser" src="images/floris-visser.png" alt="floris-visser.png">
+      <div class="image-text-floris-home">
+        <p>Floris Visser</p>
+      </div>
+    </div>
+    <div id="overlay-dialog"></div>
+    <dialog id="florisVisserPopup">
+      <div class="florisvisser-container">
+        <h2>Floris Visser</h2>
+        <img class="floris-visser-popup-img" src="images/floris-visser.jpeg" alt="images/floris-visser.jpeg">
+        <div class="image-text">Gezond, duurzaam, betaalbaar eten is de toekomst!</div>
+      </div>
+      <p>Floris Visser heeft een <span class="highlight">volkskantine</span> opgericht om gezond duurzaam eten <span class="highlight">toegankelijker</span> te maken voor mensen
+        met weinig te besteden. Hij begon de pilot in Flevoland en vervolgens heeft hij de volkskantine verplaatst naar Rotterdam. Visser zegt in een interview dat de volkskantine als voordeel heeft dat je kan kiezen tussen <span class="highlight">allerlei soorten gerechten</span> en dat is vooral handig voor mensen die met hun <span class="highlight">gezondheid</span> bezig zijn, zoals mensen die uit de sportschool komen en mensen die een specifieke maaltijd willen.
+      </p>
+
+      <p>
+        De volkskantine concurreert met <span class="highlight">fast food ketens</span>, omdat ze voor <span class="highlight">snackbarprijzen</span> maaltijden aanbieden. Het verschil met bijvoorbeeld de KFC echter is dat de volkskantine <span class="highlight">voedzame duurzame maaltijden</span> aanbiedt. Mensen stellen zelf hun maaltijd samen en kunnen daarbij kiezen uit <span class="highlight">15 gerechten</span>. Ook biedt de volkskantine <span class="highlight">workshops</span> aan in koken voor mensen uit verschillende groepen. Floris Visser zegt dat zijn doel is om meer mensen <span class="highlight">plantaardig</span> te laten eten, vandaar dat er in het menu <span class="highlight">geen dierlijke producten</span> zitten. Visser benadrukt wel dat de gerechten <span class="highlight">niet vegan</span> zijn, anders raak je volgens hem de helft van de klanten kwijt.
+      </p>
+
+      <div class="content-section">
+        <video controls src="video/volkskantine.mp4" class="video/volkskantine.mp4"></video>
+      </div>
+      <div class="image-gallery-floris-visser">
+        <img src="images/volkskantine-binnen.png" alt="volkskantine-foto">
+        <img src="images/mealprep.jpg" alt="mealprep">
+        <img src="images/volkskantine-binnen.png" alt="volkskantine-foto">
+        <img src="images/mealprep.jpg" alt="mealprep">
+      </div>
+      <div class="content-section-user-reaction">
+        <textarea placeholder="Laat een reactie achter..." class="reaction-textarea"></textarea>
+        <button class="submit-reaction-btn">Verzend</button>
+      </div>
+      <button id="closeFlorisVisserDialogBtn">Close</button>
+    </dialog>
+    <!-- Quiz-->
+    <div class="quiz-container-home">
+      <img id="puzzelboekjeImg" class="puzzelboekje" src="images/puzzelboekje.png" alt="puzzelboekje.png">
+      <div class="image-text-quiz-home">
+        <p>Quiz gezond eten</p>
+      </div>
+    </div>
+    <dialog id="quizDialog">
+      <div class="popupQuiz">
+        <div class="start-quiz">
+          <h2>Quiz - wat is gezond?</h2>
+          <p class="intro-text">Test je kennis over <span class="highlight">gezondheid</span> met deze <span class="highlight">quiz!</span></p>
+          <button class="start-quiz-btn" id="startQuizBtn">Start Quiz</button>
+        </div>
+        <div class="question active">
+          <div id="snowfall"></div>
+          <p>Stelling 1/5: Natuurlijke suikers zijn gezond.</p>
+          <div>
+            <button class="fact">Feit</button>
+            <button class="fiction">Fictie</button>
+          </div>
+          <video class="video" width="320" height="240" autoplay loop muted playsinline>
+            <source src="video/banaan.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="notification hidden"></p>
+        </div>
+        <div class="question">
+          <p>Stelling 2/5: Cholesterol is slecht voor je</p>
+          <div>
+            <button class="fact">Feit</button>
+            <button class="fiction">Fictie</button>
+          </div>
+          <video class="video" width="320" height="240" autoplay loop muted playsinline>
+            <source src="video/ei.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="notification hidden"></p>
+        </div>
+        <div class="question">
+          <p>Stelling 3/5: Alle koolhydraten zijn ongezond</p>
+          <div>
+            <button class="fact">Feit</button>
+            <button class="fiction">Fictie</button>
+          </div>
+          <video class="video" width="320" height="240" autoplay loop muted playsinline>
+            <source src="video/brood .mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="notification hidden"></p>
+        </div>
+        <div class="question">
+          <p>Stelling 4/5: Per dag moet je minimaal 1.5 tot 2 liter water drinken</p>
+          <div>
+            <button class="fact">Feit</button>
+            <button class="fiction">Fictie</button>
+          </div>
+          <video class="video" width="320" height="240" autoplay loop muted playsinline>
+            <source src="video/water.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="notification hidden"></p>
+        </div>
+        <div class="question">
+          <p>Stelling 5/5: Vitamines zitten niet alleen in groenten en fruit</p>
+          <div>
+            <button class="fact">Fact</button>
+            <button class="fiction">Fiction</button>
+          </div>
+          <video class="video" width="320" height="240" autoplay loop muted playsinline>
+            <source src="video/broccoli.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="notification hidden"></p>
+        </div>
+        <!-- Add more questions similarly -->
+        <div class="conclusion hidden">
+          <!-- <p>Good job finishing the quiz! You had 2 out of 10 correct answers!</p> -->
+        </div>
+      </div>
+      <button id="closeQuizBtn">Sluit af</button>
+    </dialog>
+    <div class="mensa-mensa">
+      <span>Mensa</span>
+      <span>Mensa</span>
+    </div>
+  </section>
+  <!-- load script at the end like a boss -->
+  <script src="script/gsap-public/minified/gsap.min.js"></script>
+  <script src="script/script-intro.js"></script>
+  <script src="script/scriptmainpage.js"></script>
+</body>
+
+</html>
